@@ -18,6 +18,7 @@ def hbnb():
     """this displays HBNB"""
     return "HBNB"
 
+
 @app.route("/c/<text>", strict_slashes=False)
 def c(text):
     """this will displays 'c'"""
