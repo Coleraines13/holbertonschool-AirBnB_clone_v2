@@ -9,7 +9,7 @@ from models.base_model import BaseModel, Base
 
 class Review(BaseModel):
     """ Review classto store review information """
-    __tablename__ = 'reveiws'
+    __tablename__ = 'review'
     place_id = Column(
             String(60), ForeignKey('places.id'), nullable=False
     ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
