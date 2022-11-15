@@ -7,7 +7,7 @@ from sqlalchemy import relationship
 from models.base_model import BaseModels, Base
 
 
-class User(Basemodel, Base):
+class User(BaseModel, Base):
     """this defines the class user"""
     __tablename__ = 'users'
     email = Column(
