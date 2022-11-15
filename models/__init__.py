@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+# File: __init__.py
+# Main Authors: Justin Majetich - Ezra Nobrega
+# email(s): <justinmajetich@gmail.com>
+#           <ezra.nobrega@outlook.com>
+
 """This module instantiates an object of class FileStorage"""
 import os
 from models.base_model import BaseModel, Base

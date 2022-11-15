@@ -1,4 +1,4 @@
-#!/usr/bin/pthon3
+#!/usr/bin/python3
 """this will define a class to manage data base storage"""
 import os
 from sqlalchemy import create_engine
