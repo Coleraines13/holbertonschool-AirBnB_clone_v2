@@ -14,7 +14,7 @@ class City(BaseModel, Base):
         String(128), nullable=False
     ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
     state_id = Column(
-        String(60), ForeignKey('states.id'), nullable=False
+            String(11), ForeignKey('states.id'), nullable=False
     ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
     places = relationship(
         'Place',
