@@ -12,10 +12,13 @@ class Review(BaseModel, Base):
     __tablename__ = 'reviews'
     place_id = Column(
             String(60), ForeignKey('places.id'), nullable=False
-    ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
-    user_id = Column(
+    user_id = Column
             String(60), ForeignKey('users.id'), nullable=False
-    ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
-    text = Column(
-            String(1024), nullable=False
-    ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
+    text = Column(String(1024), nullable=False)
+
+    if os.getenv('HBNB_TYPE_STORAGE') != "db":
+        @property
+        def user(self):
+        """ this retrieves the user of the review"""
+            from models import storage
+            return storage.all(User).get("User.{}".format(self.user_id))

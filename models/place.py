@@ -8,7 +8,6 @@ from models.base_model import BaseModel, Base
 from models.review import Review
 from models.amenity import Amenity
 
-
 place_amenity = Table(
         'place_amenity',
         Base.metadata,
