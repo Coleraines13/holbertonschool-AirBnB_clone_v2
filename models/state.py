@@ -11,7 +11,7 @@ from models.city import City
 class State(BaseModel, Base):
     """ State class """
     __tablename__ = 'states'
-    State = Column(
+    name = Column(
         String(128), nullable=False
     ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
     if os.getenv('HBNB_TYPE_STORAGE') == 'db':
