@@ -3,10 +3,9 @@
 
 from models import storage
 from flask import Flask, render_template
-from models import State
-
 
 app = Flask(__name__)
+
 
 @app.teardown_appcontext
 def teardown_db(self):
