@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" this starts a script that starts a Flask web application"""
+"""this starts a script that starts a Flask web application"""
 
 from models import storage
 from flask import Flask, render_template
@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.teardown_appcontext
 def teardown_db(self):
-    """ testing"""
+    """testing"""
     storage.close()
 
 
