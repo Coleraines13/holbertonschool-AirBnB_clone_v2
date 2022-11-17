@@ -10,7 +10,13 @@ from models.base_model import BaseModel, Base
 class State(BaseModel, Base):
     """ this is the class of state """
     __tablename__ = 'states'
+<<<<<<< HEAD
     name = Column(String(128), nullable=False)
+=======
+    State = Column(
+        String(128), nullable=False
+    ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
+>>>>>>> parent of c4e3a9a... working on it
     if os.getenv('HBNB_TYPE_STORAGE') == 'db':
         cities = relationship("City",backref="state",
                              cascade="all, delete, delete-orphan")
