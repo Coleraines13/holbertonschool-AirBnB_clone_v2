@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"this starts a script that starts a Flask web application"
+"""7-states_list starts a script that starts a Flask web application"""
 
 from models import storage
 from flask import Flask, render_template
